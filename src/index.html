@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Web Developer, Angular, UI Portfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+</head>
+<body>
+  <div id="home-bg"></div>
+  <app-root></app-root>  
+  <!--<div id="butterflycontainer"></div>-->
+  <div class="app-loading">
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  </div>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-116680087-1', 'auto');// add your tracking ID here.
+    ga('send', 'pageview');
+  </script>
+  <!-- threejs.org canvas lines example -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+
+<script>
+  var mouseX = 0,
+      mouseY = 0,
+      windowHalfX = window.innerWidth / 2,
+      windowHalfY = window.innerHeight / 2,
+      SEPARATION = 200,
+      AMOUNTX = 10,
+      AMOUNTY = 10,
+      camera,
+      scene,
+      renderer;
+  
+  init();
+  animate();
+
+	function init() {
+
+  	var container,
+        separation = 100,
+        amountX = 50,
+        amountY = 50,
+        particle;
+    
+    container = document.createElement( 'div' );
+    document.getElementById("home-bg").appendChild( container );
+
+    scene = new THREE.Scene();
+
+    renderer = new THREE.CanvasRenderer({ alpha: true }); // gradient; this can be swapped for WebGLRenderer
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    container.appendChild( renderer.domElement );
+    
+    camera = new THREE.PerspectiveCamera(
+    	75,
+      window.innerWidth / window.innerHeight,
+      1,
+      10000
+    );
+    camera.position.z = 100;
+
+		// particles
+    var PI2 = Math.PI * 2;
+    var material = new THREE.SpriteCanvasMaterial({
+    	color: 0xffffff,
+    	program: function ( context ) {
+				context.beginPath();
+        context.arc( 0, 0, 0.5, 0, PI2, true );
+        context.fill();
+      }
+    });
+    
+    var geometry = new THREE.Geometry();
+
+    for ( var i = 0; i < 100; i ++ ) {
+      particle = new THREE.Sprite( material );
+      particle.position.x = Math.random() * 2 - 1;
+      particle.position.y = Math.random() * 2 - 1;
+      particle.position.z = Math.random() * 2 - 1;
+      particle.position.normalize();
+      particle.position.multiplyScalar( Math.random() * 10 + 450 );
+      particle.scale.x = particle.scale.y = 10;
+      scene.add( particle );
+      geometry.vertices.push( particle.position );
+    }
+
+    // lines
+    var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xffffff, opacity: 0.5 } ) );
+    scene.add( line );
+
+    // mousey
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+		document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+    document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+		
+ 		window.addEventListener( 'resize', onWindowResize, false );
+
+	} // end init();
+
+	function onWindowResize() {
+
+  	windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+	}
+
+	function onDocumentMouseMove(event) {
+
+  	mouseX = event.clientX - windowHalfX;
+    mouseY = event.clientY - windowHalfY;
+
+  }
+
+  function onDocumentTouchStart( event ) {
+
+		if ( event.touches.length > 1 ) {
+
+    	event.preventDefault();
+
+      mouseX = event.touches[ 0 ].pageX - windowHalfX;
+      mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+    }
+	}
+
+  function onDocumentTouchMove( event ) {
+
+  	if ( event.touches.length == 1 ) {
+
+    	event.preventDefault();
+
+      mouseX = event.touches[ 0 ].pageX - windowHalfX;
+      mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+		}
+	}
+
+	function animate() {
+    
+		requestAnimationFrame( animate );
+    render();
+    
+	}
+
+	function render() {
+		
+    camera.position.x += ( mouseX - camera.position.x ) * .05;
+    camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
+    camera.lookAt( scene.position );
+
+    renderer.render( scene, camera );
+  
+  }
+</script>
+</body>
+</html>

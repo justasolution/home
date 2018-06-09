@@ -1,0 +1,20 @@
+.font-120 {
+  font-size: 120px;
+}
+.items i {
+  font-size: 120px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.about-skills-section {
+  padding: 30px;
+  margin: 40px 0;
+  -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+}
+
+.about-language-section{
+  margin: 40px 0;
+}

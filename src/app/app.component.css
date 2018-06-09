@@ -1,0 +1,45 @@
+
+
+.nav>li>a:focus, .nav>li>a:hover{
+  background-color: transparent!important;
+}
+
+.float{
+  position: absolute;
+  z-index: 1000;
+  top: 30px;
+  left: 70px;
+  height: 24px;
+  /* padding: 0; */
+  /* cursor: pointer; */
+  border: none;
+  pointer-events: none;
+  outline: none;
+  background: transparent;
+  transition: 2s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  /* right: calc(100% - 100px); */
+}
+
+.float-top-right{
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  text-align: center;
+}
+
+.switch {
+  position:fixed;
+  top:40px;
+  right:40px;
+  width: 80px;
+  height: 40px;
+  z-index: 999;
+}
+.switch button {
+  display: none;
+}
+
+
+
