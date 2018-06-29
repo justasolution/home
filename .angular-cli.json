@@ -26,15 +26,27 @@
         "assets/css/demo.css",
         "assets/css/component.css",
         "assets/css/animation.css",
-        "../node_modules/ngx-toastr/toastr.css"
+        
+        "assets/css/owl.carousel.css",
+        "assets/css/owl.theme.default.css",
+        "assets/css/style.css",
+        "../node_modules/ngx-toastr/toastr.css",
+        "assets/fonts/fontawesome/css/font-awesome.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/blast-text/jquery.blast.min.js",
         "../src/assets/thirdpartyjs/modernizr-custom.js",
         "../src/assets/thirdpartyjs/classie.js",
-        "../src/assets/thirdpartyjs/main.js",
-        "../src/assets/thirdpartyjs/butterflyeffect.js"
+        "../src/assets/thirdpartyjs/main.js",        
+        "../src/assets/thirdpartyjs/bootstrap.min.js",        
+        "../src/assets/thirdpartyjs/owl.carousel.js",        
+        "../src/assets/thirdpartyjs/script.js",        
+        "../src/assets/thirdpartyjs/scrollIt.js",        
+        "../src/assets/thirdpartyjs/TweenMax.js",
+        "../src/assets/thirdpartyjs/typed.js",
+        "../src/assets/thirdpartyjs/wow.min.js",
+        "../src/assets/thirdpartyjs/app.js"   
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -7,7 +7,8 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent { 
+
 
   constructor(private toastr: ToastrService, public http: Http){
     //this.loadComponent = false;
@@ -77,12 +78,12 @@ export class AppComponent {
   ngAfterViewInit(){
     setTimeout(() => this.showSuccess(), 15000);
     setTimeout(() => this.showInfo(), 24000);
-  }
+  } 
   ngOnInit(){
     if (window.screen.width <= 425) {
       this.noMobile = false;
     }
+    
     //this.gaGetCountry();
-
   }
 }
