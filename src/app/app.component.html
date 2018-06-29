@@ -1,11 +1,8 @@
-
-<!-- ====== Content Wrapper ======  -->
 <div id="app" data-scroll-index="0">
-    <!-- Logo Image for small devices -->
     <div class="small_device_logo">
-            <img src="../assets/images/justasolution_logo.PNG" alt="Title 2">
+            <img src="../assets/images/justasolution_logo.PNG" alt="Just a Solution">
         </div>
-        <!-- ====== Navgition ======  -->
+        
         <nav class="row">
             <div class="desktop_nav">
                 <!-- Toggle button for small devices -->
@@ -19,7 +16,7 @@
                 <div class="nav_container container nav_container_1">
   
                     <!-- logo for desktop -->
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 logo_container">
                         <img src="../assets/images/justasolution_logo.PNG" alt="Title 2">
                     </div>
   
@@ -53,9 +50,7 @@
                 </div>
             </div>
         </nav>
-        <!-- ====== End of Navgition ======  -->
-  
-        <!-- ====== Header ======  -->
+        
         <header id="home" class="header_bg">
             <!-- particles container -->
             <div id="particles-js">
@@ -71,10 +66,7 @@
                 </div>
             </div>
         </header>
-        <!-- ====== End of Header ======  --> 
-    
 
-    <!-- ====== Services ======  -->
     <section id="seervices" class="what_i_do_section" data-scroll-index="1">
         <div class="container">
             <div class="service_area">
@@ -175,9 +167,7 @@
             </div>
         </div>
     </section>
-    <!-- ====== End of Services ======  -->
-
-    <!--====== Numbers ======-->
+    
     <div class="numbers text-center">
         <div class="numbers_wrapper">
             <div class="container">
@@ -214,10 +204,7 @@
             </div>
         </div>
     </div>
-
-    <!--====== End Numbers ======-->
-
-    <!--====== Projects ======-->
+    
     <section id="projects" class="recent_works_section" data-scroll-index="2">
         <div class="row">
             <div class="portfolio_wrapper portfolio">
@@ -283,8 +270,6 @@
         </div>
     </section>
 
-
-    <!--====== Testimonials ======-->
     <section id="clients" data-scroll-index="3" class="testimonials">
         <div class="container">
             <div class="testimonials_heading">
@@ -344,9 +329,6 @@
         </div>
     </section>
 
-    <!--====== End of Testimonials ======-->
-
-    <!--====== Hire ======-->
     <div class="hire section-padding">
         <div class="container">
             <div class="row">
@@ -367,9 +349,7 @@
             </div>
         </div>
     </div>
-    <!--====== End Hire ======-->
 
-    <!--====== Blog ======-->
     <section id="blog" class="blog section-padding" data-scroll-index="4">
         <div class="container">
             <div class="section-head">
@@ -442,9 +422,7 @@
             </div>
         </div>
     </section>
-    <!--====== End Blog ======-->
 
-    <!-- ====== About ======  -->
     <section id="about" class="hero section-padding" data-scroll-index="5">
         <div class="container">
             <div class="row">
@@ -527,74 +505,29 @@
             </div>
         </div>
     </section>
-    <!-- ====== End of About ======  -->
-
-    <!--====== Contact ======-->
+    
     <section id="contact" class="contact_us_section" data-scroll-index="6">
         <div class="contac_wrapper">
             <div class="container">
-                <div class="row contact_heading">
-                    <h1>Contact Me</h1>
-                </div>
-                <div class="contact_form_wrapper col-md-8">
-                    <form method="post" action="#">
-                        <span class="input_wrapper">
-                                <span class="fa fa-user"></span>
-                        <input type="text" id="name" name="name" placeholder="Your name..">
-                        </span>
-                        <span class="input_wrapper">
-                                <span class="fa fa-envelope"></span>
-                        <input type="email" id="email" name="email" placeholder="Your email..">
-                        </span>
-                        <span class="input_wrapper">
-                                <span class="fa fa-tag"></span>
-                        <input type="text" id="subject" name="subject" placeholder="Subjact">
-                        </span>
-                        <span class="input_wrapper">
-                                <span class="fa fa-pencil"></span>
-                        <textarea id="message" name="message" placeholder="Write something.."></textarea>
-                        </span>
-                        <button class="button_submit" type="submit" value="SEND IT NOW">Send It Now</button>
-                    </form>
-                </div>
-                <div class="contact_right  col-md-4">
-                    <div class="contact_via email_contact wow fadeInDown" data-wow-delay=".35s">
-                        <i class="fa fa-envelope"></i>
-                        <p>info@emadam.com</p>
-                    </div>
-                    <div class="contact_via phone_contact wow fadeInDown" data-wow-delay=".25s">
-                        <i class="fa fa-phone"></i>
-                        <p>0734 - 231 233</p>
-                    </div>
-                    <div class="contact_via address wow fadeInDown" data-wow-delay=".15s">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p>trtrt.<br>tewafsadfasdfas,</p>
-                    </div>
-                </div>
+                <app-contact-me></app-contact-me>
             </div>
         </div>
     </section>
-    <!--====== End of Contact ======-->
-
-    <!--====== Footer ======-->
+    
     <footer>
         <div class="social_links">
-            <a href="#" class="fa fa-facebook wow fadeInLeft" data-wow-delay=".35s"></a>
-            <a href="#" class="fa fa-twitter wow fadeInLeft" data-wow-delay=".25s"></a>
-            <a href="#" class="fa fa-linkedin wow fadeInLeft" data-wow-delay=".15s"></a>
-            <a href="#" class="fa fa-pinterest wow fadeInRight" data-wow-delay=".15s"></a>
+            <a href="#" class="fa fa-facebook wow fadeInLeft" data-wow-delay=".35s"></a>            
+            <a href="#" class="fa fa-linkedin wow fadeInLeft" data-wow-delay=".25s"></a>            
             <a href="#" class="fa fa-github wow fadeInRight" data-wow-delay=".25s"></a>
             <a href="#" class="fa fa-stack-overflow wow fadeInRight" data-wow-delay=".35s"></a>
         </div>
         <div class="copy_right_section">
-            Copyright © 2018 | Designed and Developed By <a href="#">Motahar Hossain</a>
+            Copyright © 2018 | Designed and Developed By <a href="#">Mushrath Mohammad</a>
         </div>
         <!-- Scroll Top Button -->
         <div class="scroll_top">
             <p class="scroll_top_btn" data-scroll-nav="0"><i class="fa fa-angle-up"></i></p>
         </div>
     </footer>
-    <!--====== End of Footer ======-->
 
 </div>
-<!-- ====== End of Content Wrapper ======  -->

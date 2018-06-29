@@ -180,23 +180,51 @@ img {
 }
 
 .nav_container_2 {
-    position: fixed;
-    width: 100%;
+    position: fixed;    
     top: 0;
     z-index: 200;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
-    box-sizing: border-box;
-    border-bottom: 1px solid #f7f7f7;
-    background-color: white;
+    box-sizing: border-box;        
+    text-align: right;
+    line-height: 1.4;
+    left: auto;
+    right: -10px;
+    width: auto!important;
 }
 
-.nav_container_2 ul li a {
-    border-bottom: 2px solid #fff;
+.nav_container_2 .logo_container img{
+    display: none;
+}
+
+.nav_container_2 ul li {
+    display: list-item;
+    float: none!important;
+    margin: 0;
+    padding: 0;
+}
+.nav_container_2 ul li{
+    transition-delay: .5s;
+}
+
+.nav_container_2 ul li a {    
     padding-bottom: 15px;
     font-weight: 500;
     color: #333;
+}
+
+
+.nav_container_2 ul li a:hover::after {   
+    margin-left: 9px;
+    width: 15px; 
+    content: '';
+    border-top: 1px solid #333;
+    width: 0;
+    display: inline-block;
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+    transition: all .2s cubic-bezier(.42,.01,.23,1);
 }
 
 .nav_container_2 img {
@@ -354,11 +382,11 @@ img {
 -------------------------------------------------------- */
 
 #app header {
-    height: 100vh;
+    height: 90vh;
 }
 
 .header_bg {
-    background: url(/assets/images//bg2.jpg) no-repeat 50% 0 fixed;
+    background: url(/assets/images/bg2.jpg) no-repeat 50% 0 fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1932,7 +1960,7 @@ img {
 -------------------------------------------------------- */
 
 .copy_right_section {
-    padding: 15px 15px 100px 15px;
+    padding: 15px 15px 10px 15px;
     background-color: #057175;
     color: white;
     text-align: center;
@@ -1943,7 +1971,7 @@ img {
 }
 
 .social_links {
-    padding: 100px 15px 15px 15px;
+    padding: 10px 15px 15px 15px;
     background-color: #057175;
     color: white;
     text-align: center;
@@ -2110,7 +2138,7 @@ img {
     }
     #app header {
         margin-top: 0;
-        height: 100vh;
+        height: 90vh;
         background-color: #04c2c9;
     }
     .profie_img {

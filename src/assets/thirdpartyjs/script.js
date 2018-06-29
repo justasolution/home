@@ -19,7 +19,7 @@ $(function() {
     // Typed Js
     $(function() {
         $(".write").typed({
-            strings: ["Welcome to emadam.com!", "I am a Full Stack Developer", "Thanks for visit"],
+            strings: ["Welcome to JustaSolution!", "I am a Full Stack Angular Developer", "Thanks for visit"],
             // typing speed
             typeSpeed: 30,
             // time before typing starts
@@ -67,10 +67,10 @@ $(function() {
     });
 
     // Counter JS
-    $('.counter').countUp({
-        'time': 5000,
-        'delay': 50
-    });
+    // $('.counter').countUp({
+    //     'time': 5000,
+    //     'delay': 50
+    // });
 
 
     // Owl Carousel
@@ -128,25 +128,25 @@ $(window).on("load", function() {
     });
 
     // isotope
-    $('.gallery').isotope({
-        // options
-        itemSelector: '.items'
-    });
+    // $('.gallery').isotope({
+    //     // options
+    //     itemSelector: '.items'
+    // });
 
-    var $gallery = $('.gallery').isotope({
-        // options
-    });
+    // var $gallery = $('.gallery').isotope({
+    //     // options
+    // });
 
     // filter items on button click
-    $('.filtering').on('click', 'span', function() {
+    // $('.filtering').on('click', 'span', function() {
 
-        var filterValue = $(this).attr('data-filter');
+    //     var filterValue = $(this).attr('data-filter');
 
-        $gallery.isotope({
-            filter: filterValue
-        });
+    //     $gallery.isotope({
+    //         filter: filterValue
+    //     });
 
-    });
+    // });
 
     $('.filtering').on('click', 'span', function() {
 
